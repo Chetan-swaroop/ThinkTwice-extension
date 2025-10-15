@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Quick meta tag to handle responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Think Twice</title>
+
+    <!-- Linking external stylesheet (might tweak later if we add dark mode) -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Main popup wrapper -->
+    <div class="popup-container">
+      <!-- App title - maybe add a small subtitle later -->
+      <h1>🧠 Think Twice</h1>
+
+      <!-- Section for adding a new task -->
+      <div class="section">
+        <h2>Add a Task</h2>
+
+        <!-- Task name input -->
+        <input
+          type="text"
+          id="taskName"
+          placeholder="Task name..."
+          class="input-field"
+        />
+
+        <!-- Optional link (for docs, pdfs, or notes) -->
+        <input
+          type="text"
+          id="taskLink"
+          placeholder="Link or PDF URL (optional)"
+          class="input-field"
+        />
+
+        <!-- Priority dropdown (might add colors later) -->
+        <select id="taskPriority" class="input-field">
+          <option value="Low">Low Priority</option>
+          <option value="Medium" selected>Medium Priority</option>
+          <option value="High">High Priority</option>
+        </select>
+
+        <!-- Button to add task -->
+        <button id="addTaskBtn" class="btn btn-primary">Add Task</button>
+      </div>
+
+      <!-- Section displaying the user’s list of tasks -->
+      <div class="section">
+        <h2>Your Tasks</h2>
+        <ul id="taskList" class="task-list">
+          <!-- Tasks will show up here dynamically -->
+        </ul>
+      </div>
+
+      <!-- Settings / options area -->
+      <div class="section">
+        <!-- Might rename this button later -->
+        <button id="optionsBtn" class="btn btn-secondary">
+          Configure Blocked Sites
+        </button>
+      </div>
+    </div>
+
+    <!-- Probably need to handle error messages later -->
+    <script src="popup.js"></script>
+  </body>
+</html>
